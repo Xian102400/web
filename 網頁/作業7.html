@@ -1,0 +1,75 @@
+	<!doctype html>
+<html>
+     <head>
+          <meta charset="utf-8">
+               <title>
+               作業7 
+               </title>
+               <script>
+                    function a(){
+                            var x =document.getElementById("out1");
+                            var a = Number(document.getElementById("x2").value);
+                            var b= Number(document.getElementById("x1").value);
+                            var c= Number(document.getElementById("x0").value);
+                            d=Number(b*b-4*a*c);
+                                if (d>=0){
+                                d=Math.sqrt(d);
+                                e=(-1*Number(b)+d)/2/Number(a);
+                               d=(-1*Number(b)-d)/2/Number(a);
+                               x.innerHTML = "答案為"+d+","+e;
+                             } 
+                           else {x.innerHTML = "無解";}
+                            
+                    }
+                    function b(){
+                            var ia=Number(document.getElementById("ra").value);
+                            var ib=Number(document.getElementById("rb").value);
+                            var ic=Number(document.getElementById("rc").value);
+                            rt=ia+ib+ic;
+                            r1=(ia*ib)/(ia+ib+ic);
+                            r2=(ib*ic)/(ia+ib+ic);
+                            r3=(ia*ic)/(ia+ib+ic);
+                            var ab = document.getElementById("out2");
+                            var bb= document.getElementById("out3");
+                            var cb= document.getElementById("out4");
+                            ab.textContent=r1;
+                            bb.textContent=r2;
+                            cb.textContent=r3;
+                     }
+                      function c(){
+                       var i1c=Number(document.getElementById("r1").value);
+                       var i2c=Number(document.getElementById("r2").value);
+                       var i3c=Number(document.getElementById("r3").value);
+                       var ac = document.getElementById("out5");
+                       var bc= document.getElementById("out6");
+                       var cc= document.getElementById("out7");
+                       rt2=i1c*i2c+i2c*i3c+i3c*i1c;
+                       acc=rt2/i2c;
+                       bcc=rt2/i3c;
+                       ccc=rt2/i1c;
+                       ac.textContent=acc;
+                       bc.textContent=bcc;
+                       cc.textContent=ccc;
+                      }
+            </script>     
+     </head>
+     <body>
+          <input type="number" id="x2" value="" />X<sup>2</sup>+
+          <input type="number" id="x1" value="" />x+
+          <input type="number" id="x0" value="" />=0<br><br>
+          <button onclick="a();">算出來</button><br><br>
+          <span id="out1"> </span><br>
+          <img src="pic/homework1.png"><br>
+          RA<input type="number" id="ra" value="" />ΩR1=
+          <span id="out2"></span> <br>
+          RB<input type="number" id="rb" value="" />ΩR2=
+          <span id="out3"></span><br>
+          RC<input type="number" id="rc" value="" />ΩR3=
+          <span id="out4"></span> <br>
+          <button onclick="b();">算出來</button><br><br><br>
+          R1<input type="number" id="r1" value="" />Ω<span id="out5"></span> <br>
+          R2<input type="number" id="r2" value="" />Ω<span id="out6"></span> <br>
+          R3<input type="number" id="r3"value="" />Ω<span id="out7"></span> <br>
+          <button onclick="c();">算出來</button><br><br><br>
+     </body>
+</html>
